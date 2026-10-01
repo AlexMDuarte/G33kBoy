@@ -1,0 +1,16 @@
+Third-party notices
+
+OpenAL Soft 1.25.2
+The Windows audio library is distributed under the GNU Library General Public License, version 2
+or later. The matching source code and COPYING license are included under
+third_party/OpenAL-Soft-1.25.2-source. The shipped OpenAL32.dll is OpenAL Soft's 64-bit Windows
+backend renamed for the OpenAL loader used by this application.
+
+MinGW-w64/GCC runtime libraries
+The audio backend also uses libgcc_s_seh-1.dll and libstdc++-6.dll under the GCC Runtime Library
+Exception, and libwinpthread-1.dll under the permissive MinGW-w64 winpthreads license. Copies of
+the applicable license texts are in third_party/OpenAL-Soft-1.25.2. Their upstream source projects:
+https://gcc.gnu.org/git/ and https://github.com/mingw-w64/mingw-w64
+
+G33kBoy and DTC.Core are distributed under the MIT license. See LICENSE and DTC.Core/LICENSE.
+Other NuGet dependencies retain their respective upstream licenses.

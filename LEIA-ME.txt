@@ -1,0 +1,34 @@
+G33kBoy — emulador de Game Boy para Windows
+
+UTILIZAR A VERSÃO PRONTA
+1. Extraia o ficheiro G33kBoy-Windows-x64.zip para uma pasta.
+2. Abra G33kBoy.exe.
+3. No menu File > Open (ou Ctrl+O), escolha uma ROM sua: .gb, .gbc ou um ZIP com uma destas ROMs.
+4. Para jogar com comando, ligue-o ao PC antes ou durante a execução do emulador. São suportados comandos Xbox e outros compatíveis com XInput.
+
+COMANDOS
+- Setas: direções
+- X: botão A; Z: botão B
+- Enter: Start; Espaço: Select
+- Comando XInput: cruz direcional ou analógico esquerdo para direções; A/B para os botões A/B; View/Back para Select; Menu/Start para Start
+- F6: pausar/retomar
+- Ctrl+R: reiniciar; Ctrl+O: abrir ROM
+
+CONFIGURAÇÃO
+Os menus Display, Sound e Emulation permitem ajustar a imagem, o som e a cor dos jogos DMG. O comando é detetado automaticamente; o mapeamento é fixo.
+As preferências são guardadas em %APPDATA%\G33kBoy.
+
+FORMATOS E COMPATIBILIDADE
+A aplicação aceita ROMs .gb e .gbc, incluindo ROMs dentro de ficheiros .zip. Implementa DMG e CGB,
+áudio, cartuchos comuns, gravações de estado e captura de ecrã. Não inclui ROMs de jogos.
+
+CÓDIGO-FONTE
+Abra G33kBoy.sln com uma versão do Visual Studio que suporte .NET 10 ou compile com o SDK .NET 10. O projeto principal é
+G33kBoy\G33kBoy\G33kBoy.csproj. As dependências .NET são restauradas a partir do NuGet.
+
+CRÉDITOS E LICENÇAS
+O núcleo e a interface partem do projeto G33kBoy, de Dean Edis, e das bibliotecas DTC.Core e
+DTC.Emulation, usados nos termos permissivos indicados nos respetivos ficheiros de licença.
+O áudio usa OpenAL Soft 1.25.2. Consulte THIRD-PARTY-NOTICES.txt. O código-fonte correspondente
+e os avisos completos estão na pasta third_party do pacote G33kBoy-Source.zip. Consulte também
+LICENSE e DTC.Core\LICENSE.

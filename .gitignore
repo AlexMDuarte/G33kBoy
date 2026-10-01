@@ -1,0 +1,10 @@
+# Build outputs
+**/bin/
+**/obj/
+.vs/
+.vscode/
+TestResults/
+*.user
+*.suo
+*.sav
+*.tga

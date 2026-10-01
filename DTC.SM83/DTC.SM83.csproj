@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <Company>Dean Edis (DeanTheCoder)</Company>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="SharpHook" Version="5.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DTC.Core\DTC.Core\DTC.Core.csproj" />
+      <ProjectReference Include="..\DTC.Emulation\DTC.Emulation.csproj" />
+    </ItemGroup>
+
+</Project>
