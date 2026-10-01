@@ -29,7 +29,8 @@ public class DmgAcid2Tests : TestsBase
     [Test, Sequential]
     public void Run([ValueSource(nameof(RomFiles))] (FileInfo RomFile, string ExpectedHash) romFileAndHash)
     {
-        Assert.That(romFileAndHash.RomFile, Does.Exist, $"Missing dmg-acid2 ROM at {romFileAndHash.RomFile.FullName}");
+        if (!romFileAndHash.RomFile.Exists)
+            Assert.Ignore($"Optional dmg-acid2 test ROM is not present: {romFileAndHash.RomFile.FullName}");
 
         var cartridge = new Cartridge(romFileAndHash.RomFile.ReadAllBytes());
         using var bus = new Bus(0x10000, Bus.BusType.GameBoy);
