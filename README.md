@@ -45,3 +45,5 @@ The main application project is `G33kBoy/G33kBoy/G33kBoy.csproj`. NuGet packages
 The project is distributed under the MIT License. See `LICENSE` and the individual third-party license notices.
 
 A few ROM-based test cases use external test ROM collections and may be skipped or require those collections to be present.
+
+Clone with git clone --recurse-submodules to fetch the optional external CPU and Blargg test suites used by the ROM-based tests.

@@ -1,0 +1,6 @@
+[submodule "external/GameboyCPUTests"]
+	path = external/GameboyCPUTests
+	url = https://github.com/adtennant/GameboyCPUTests.git
+[submodule "external/blargg-test-roms"]
+	path = external/blargg-test-roms
+	url = https://github.com/retrio/gb-test-roms
