@@ -25,25 +25,31 @@ No commercial games or copyrighted ROMs are included. Use ROMs you are authorize
 
 Gamepad mapping is automatic and fixed. XInput controllers are polled by the emulator while it is open.
 
-## Run on Windows
+## Build and run on Windows
 
-Download the `G33kBoy-Windows-x64.zip` release, extract it, and run `G33kBoy.exe`. Use **File > Open** or Ctrl+O to select your own ROM.
-
-## Build from source
-
-Requirements: .NET 10 SDK and Windows x64 for the packaged desktop application.
+Requirements: .NET 10 SDK.
 
 ```powershell
 dotnet build G33kBoy.sln -c Release
+dotnet run --project G33kBoy/G33kBoy/G33kBoy.csproj
+```
+
+To package a self-contained Windows x64 app:
+
+```powershell
+dotnet publish G33kBoy/G33kBoy/G33kBoy.csproj -c Release -r win-x64 --self-contained true
+```
+
+## Tests
+
+```powershell
 dotnet test UnitTests/UnitTests.csproj -c Release
 ```
+
+Clone with `git clone --recurse-submodules` to fetch the optional external CPU and Blargg test suites used by the ROM-based tests. Two display tests are skipped if their optional test ROMs are absent.
 
 The main application project is `G33kBoy/G33kBoy/G33kBoy.csproj`. NuGet packages restore during the build. See `THIRD-PARTY-NOTICES.txt` for dependency notices and licenses.
 
 ## License
 
 The project is distributed under the MIT License. See `LICENSE` and the individual third-party license notices.
-
-A few ROM-based test cases use external test ROM collections and may be skipped or require those collections to be present.
-
-Clone with git clone --recurse-submodules to fetch the optional external CPU and Blargg test suites used by the ROM-based tests.
